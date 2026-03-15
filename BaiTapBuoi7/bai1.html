@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trung tâm cấu hình giao diện</title>
+  <style>
+    /* RESET & BASIC STYLES */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #e5e7eb;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    /* LAYOUT */
+    .panel {
+      width: 100%;
+      max-width: 800px;
+      background-color: #f9fafb;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    header {
+      background-color: #f98000;
+      color: #f9fafb;
+      padding: 20px;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .container {
+      padding: 25px;
+    }
+
+    h3 {
+      background-color: #e5e7eb;
+      color: #111827;
+      padding: 8px 15px;
+      font-size: 1rem;
+      border-radius: 6px;
+      margin-bottom: 15px;
+      margin-top: 20px;
+    }
+
+    h3:first-child { margin-top: 0; }
+
+    /* CONTROL AREA */
+    .control-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    /* Ẩn các input thực tế */
+    input[type="radio"], input[type="checkbox"] {
+      display: none;
+    }
+
+    /* Style nút bấm */
+    label {
+      padding: 10px 20px;
+      background-color: #eef2ff;
+      color: #4b5563;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: all 0.2s ease;
+      border: 2px solid transparent;
+      user-select: none;
+    }
+
+    label:hover {
+      filter: brightness(0.95);
+    }
+
+    /* RESULT AREA */
+    .result-area {
+      margin-top: 30px;
+      padding: 20px;
+      background-color: #f3f4f6;
+      border-radius: 10px;
+      border: 1px dashed #d1d5db;
+    }
+
+    .desc-item {
+      padding: 12px 15px;
+      margin-bottom: 8px;
+      background-color: #ffffff;
+      color: #9ca3af; /* Mặc định mờ */
+      border-radius: 6px;
+      transition: all 0.3s ease;
+      font-size: 0.95rem;
+    }
+
+    .desc-item:last-child { margin-bottom: 0; }
+
+     /* XỬ LÝ CSS (TRẠNG THÁI CHECKED) */
+
+    /* 1. Theme */
+    #theme-light:checked ~ .container label[for="theme-light"] { background: #fff8cc; color: #8b5e00; }
+    #theme-light:checked ~ .container .desc-theme-light { background: #fff8cc; color: #111827; font-weight: 600; }
+
+    #theme-dark:checked ~ .container label[for="theme-dark"] { background: #111827; color: #f9fafb; }
+    #theme-dark:checked ~ .container .desc-theme-dark { background: #111827; color: #f9fafb; font-weight: 600; }
+
+    /* 2. Color */
+    #color-red:checked ~ .container label[for="color-red"] { background: #fee2e2; color: #991b1b; }
+    #color-red:checked ~ .container .desc-color-red { background: #fee2e2; color: #7f1d1d; font-weight: 600; }
+
+    #color-blue:checked ~ .container label[for="color-blue"] { background: #dbeafe; color: #1d4ed8; }
+    #color-blue:checked ~ .container .desc-color-blue { background: #dbeafe; color: #1d4ed8; font-weight: 600; }
+
+    #color-green:checked ~ .container label[for="color-green"] { background: #dcfce7; color: #166534; }
+    #color-green:checked ~ .container .desc-color-green { background: #dcfce7; color: #166534; font-weight: 600; }
+
+    /* 3. Language */
+    #lang-vi:checked ~ .container label[for="lang-vi"] { background: #bbf7d0; color: #166534; }
+    #lang-vi:checked ~ .container .desc-lang-vi { color: #166534; font-weight: bold; font-size: 1.1rem; }
+
+    #lang-en:checked ~ .container label[for="lang-en"] { background: #bfdbfe; color: #1d4ed8; }
+    #lang-en:checked ~ .container .desc-lang-en { color: #1d4ed8; font-weight: bold; font-size: 1.1rem; }
+
+    /* 4. Options (Checkbox) */
+    #opt-advanced:checked ~ .container label[for="opt-advanced"] { background: #fef3c7; color: #92400e; }
+    #opt-advanced:checked ~ .container .desc-opt-advanced { background: #fef3c7; color: #92400e; font-weight: 600; }
+
+    #opt-eco:checked ~ .container label[for="opt-eco"] { background: #bbf7d0; color: #15803d; }
+    #opt-eco:checked ~ .container .desc-opt-eco { background: #bbf7d0; color: #166534; font-weight: 600; }
+
+    #opt-warning:checked ~ .container label[for="opt-warning"] { background: #fee2e2; color: #b91c1c; }
+    #opt-warning:checked ~ .container .desc-opt-warning { background: #fee2e2; color: #b91c1c; font-weight: 600; }
+
+  </style>
+</head>
+<body>
+
+<div class="panel">
+  <header>Trung tâm cấu hình giao diện</header>
+
+  <input type="radio" id="theme-light" name="theme" checked>
+  <input type="radio" id="theme-dark" name="theme">
+
+  <input type="radio" id="color-red" name="color">
+  <input type="radio" id="color-blue" name="color">
+  <input type="radio" id="color-green" name="color">
+
+  <input type="radio" id="lang-vi" name="lang" checked>
+  <input type="radio" id="lang-en" name="lang">
+
+  <input type="checkbox" id="opt-advanced">
+  <input type="checkbox" id="opt-eco">
+  <input type="checkbox" id="opt-warning">
+
+  <div class="container">
+    <div class="control-area">
+      <h3>Chọn giao diện (Theme)</h3>
+      <div class="control-group">
+        <label for="theme-light">Light</label>
+        <label for="theme-dark">Dark</label>
+      </div>
+
+      <h3>Chọn màu chủ đạo (Color)</h3>
+      <div class="control-group">
+        <label for="color-red">Red</label>
+        <label for="color-blue">Blue</label>
+        <label for="color-green">Green</label>
+      </div>
+
+      <h3>Chọn ngôn ngữ (Language)</h3>
+      <div class="control-group">
+        <label for="lang-vi">VI</label>
+        <label for="lang-en">EN</label>
+      </div>
+
+      <h3>Tùy chọn bổ sung (Options)</h3>
+      <div class="control-group">
+        <label for="opt-advanced">Hiển thị mô tả nâng cao</label>
+        <label for="opt-eco">Bật chế độ Eco</label>
+        <label for="opt-warning">Hiển thị cảnh báo quan trọng</label>
+      </div>
+    </div>
+
+    <div class="result-area">
+      <div class="desc-item desc-theme-light">Theme Light: Giao diện sáng, chữ đen.</div>
+      <div class="desc-item desc-theme-dark">Theme Dark: Giao diện tối, chữ sáng.</div>
+
+      <hr style="margin: 15px 0; border: none; border-top: 1px solid #ddd;">
+
+      <div class="desc-item desc-color-red">Màu Red: được nhấn mạnh khi chọn Red.</div>
+      <div class="desc-item desc-color-blue">Màu Blue: được nhấn mạnh khi chọn Blue.</div>
+      <div class="desc-item desc-color-green">Màu Green: được nhấn mạnh khi chọn Green.</div>
+
+      <hr style="margin: 15px 0; border: none; border-top: 1px solid #ddd;">
+
+      <div class="desc-item desc-lang-vi">[VI] Xin chào bạn! Khi chọn VI, dòng này rõ hơn.</div>
+      <div class="desc-item desc-lang-en">[EN] Hello, world! Khi chọn EN, dòng này rõ hơn.</div>
+
+      <hr style="margin: 15px 0; border: none; border-top: 1px solid #ddd;">
+
+      <div class="desc-item desc-opt-advanced">Mô tả nâng cao: giải thích kỹ hơn về cách các lựa chọn đang ảnh hưởng giao diện.</div>
+      <div class="desc-item desc-opt-eco">Chế độ Eco: mô phỏng trạng thái tiết kiệm tài nguyên cho giao diện.</div>
+      <div class="desc-item desc-opt-warning">Cảnh báo quan trọng: khu vực dùng để nhấn mạnh thông tin hệ thống.</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
