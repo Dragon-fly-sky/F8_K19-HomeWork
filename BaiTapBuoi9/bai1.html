@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Shapes</title>
+    <style>
+
+        .container {
+            padding: 20px;
+        }
+
+        .shape-item {
+            display: inline-block;
+            vertical-align: bottom;
+            margin: 20px;
+            text-align: center;
+        }
+
+        /* Hình vuông */
+        .hinh-1 {
+            width: 50px;
+            height: 50px;
+            border: 2px solid red;
+        }
+
+        /* Hình chữ nhật */
+        .hinh-2 {
+            width: 100px;
+            height: 50px;
+            border: 2px solid blue;
+        }
+
+        /* Tam giác lên */
+        .hinh-3 {
+            width: 0;
+            height: 0;
+            border-left: 25px solid transparent;
+            border-right: 25px solid transparent;
+            border-bottom: 50px solid green;
+        }
+
+        /* Tam giác xuống */
+        .hinh-4 {
+            width: 0;
+            height: 0;
+            border-left: 25px solid transparent;
+            border-right: 25px solid transparent;
+            border-top: 50px solid orange;
+        }
+
+        /* Tam giác trái */
+        .hinh-5 {
+            width: 0;
+            height: 0;
+            border-top: 25px solid transparent;
+            border-bottom: 25px solid transparent;
+            border-right: 50px solid violet;
+        }
+
+        /* Tam giác phải */
+        .hinh-6 {
+            width: 0;
+            height: 0;
+            border-top: 25px solid transparent;
+            border-bottom: 25px solid transparent;
+            border-left: 50px solid orangered;
+        }
+
+        /* Hình thang */
+        .hinh-7 {
+            width: 60px;
+            height: 0;
+            border-bottom: 50px solid cornflowerblue;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+        }
+
+        /* Tam giác rộng */
+        .hinh-8 {
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 40px solid #34495e;
+        }
+
+        /* Tam giác nhọn */
+        .hinh-9 {
+            width: 0;
+            height: 0;
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            border-bottom: 80px solid brown;
+        }
+
+        /* Tam giác cân */
+        .hinh-10 {
+            width: 0;
+            height: 0;
+            border-left: 25px solid transparent;
+            border-right: 25px solid transparent;
+            border-bottom: 40px solid coral;
+        }
+
+        /* Mũi tên phải */
+        .hinh-11 {
+            width: 0;
+            height: 0;
+            border-top: 20px solid transparent;
+            border-bottom: 20px solid transparent;
+            border-left: 40px solid #5fbba3;
+        }
+
+        /* Mũi tên trái */
+        .hinh-12 {
+            width: 0;
+            height: 0;
+            border-top: 20px solid transparent;
+            border-bottom: 20px solid transparent;
+            border-right: 40px solid violet;
+        }
+
+        /* Ribbon/Lá cờ */
+        .hinh-13 {
+            width: 60px;
+            height: 0;
+            border-width: 25px 30px 25px 60px;
+            border-style: solid;
+            border-color: #e67e22 transparent #e67e22 #e67e22;
+        }
+
+        /* Chữ F8 */
+        .f8-container {
+            margin-top: 50px;
+        }
+
+        .f-letter, .eight-letter {
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        /* Chữ F */
+        .f-stem {
+            width: 30px;
+            height: 150px;
+            border-left: 35px solid brown;
+        }
+        .f-top {
+            width: 80px;
+            height: 0;
+            border-top: 35px solid brown;
+            margin-top: -150px;
+            margin-left: 35px;
+        }
+        .f-middle {
+            width: 60px;
+            height: 0;
+            border-top: 35px solid brown;
+            margin-top: 35px;
+            margin-left: 35px;
+        }
+
+        /* Số 8 */
+        .eight-top, .eight-bottom {
+            width: 60px;
+            height: 40px;
+            border: 30px solid brown;
+            margin-left: 20px;
+        }
+        .eight-bottom {
+            margin-top: -30px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="shape-item">
+        <div class="hinh-1"></div>
+        <p>1. Hình vuông</p>
+    </div>
+
+    <div class="shape-item">
+        <div class="hinh-2"></div>
+        <p>2. Hình chữ nhật</p>
+    </div>
+
+    <div class="shape-item">
+        <div class="hinh-3"></div>
+        <p>3. Tam giác lên</p>
+    </div>
+
+    <div class="shape-item">
+        <div class="hinh-4"></div>
+        <p>4. Tam giác xuống</p>
+    </div>
+
+    <div class="shape-item">
+        <div class="hinh-5"></div>
+        <p>5. Tam giác trái</p>
+    </div>
+
+    <div class="shape-item">
+        <div class="hinh-6"></div>
+        <p>6. Tam giác phải</p>
+    </div>
+
+    <div class="shape-item">
+        <div class="hinh-7"></div>
+        <p>7. Hình thang</p>
+    </div>
+
+    <div class="shape-item">
+        <div class="hinh-8"></div>
+        <p>8. Tam giác rộng</p>
+    </div>
+
+    <div class="shape-item">
+        <div class="hinh-9"></div>
+        <p>9. Tam giác nhọn</p>
+    </div>
+
+    <div class="shape-item">
+        <div class="hinh-10"></div>
+        <p>10. Tam giác cân</p>
+    </div>
+
+    <div class="shape-item">
+        <div class="hinh-11"></div>
+        <p>11. Mũi tên phải</p>
+    </div>
+
+    <div class="shape-item">
+        <div class="hinh-12"></div>
+        <p>12. Mũi tên trái</p>
+    </div>
+
+    <div class="shape-item">
+        <div class="hinh-13"></div>
+        <p>13. Ribbon/Lá cờ</p>
+    </div>
+
+    <div class="f8-container">
+        <div class="f-letter">
+            <div class="f-stem"></div>
+            <div class="f-top"></div>
+            <div class="f-middle"></div>
+        </div>
+
+        <div class="eight-letter">
+            <div class="eight-top"></div>
+            <div class="eight-bottom"></div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

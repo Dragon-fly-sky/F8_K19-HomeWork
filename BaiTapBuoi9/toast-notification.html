@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toast Notification</title>
+    <style>
+        /*Lấy mã màu bằng web https://imagecolorpicker.com/vi*/
+        /* Định dạng trang */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Ẩn checkbox */
+        #toast-toggle {
+            display: none;
+        }
+
+        /* CSS cho nút Mở thông báo */
+        .open-btn {
+            background-color: #333;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s;
+            user-select: none;
+        }
+
+        .open-btn:hover {
+            background-color: #444;
+        }
+
+        /* CSS cho hộp toast */
+        .toast {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #61c465;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            /* Ẩn khi không nhấn nút hiện thông báo */
+            visibility: hidden;
+        }
+
+        /* Khi checkbox được check (chọn phần tử cùng cấp phía sau) */
+        #toast-toggle:checked ~ .toast {
+            visibility: visible;
+        }
+
+        /* CSS nội dung toast */
+        .toast-content {
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        /* Style cho nút Đóng */
+        .close-btn {
+            background-color: rgba(0, 0, 0, 0.1);
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 4px;
+            font-size: 20px;
+            line-height: 1;
+        }
+
+        .close-btn:hover {
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+
+<input type="checkbox" id="toast-toggle">
+
+<label for="toast-toggle" class="open-btn">
+    Hiện thông báo
+</label>
+
+<div class="toast">
+    <span class="toast-content">🎉 Lưu thành công!</span>
+
+    <label for="toast-toggle" class="close-btn">&times;</label>
+</div>
+
+</body>
+</html>

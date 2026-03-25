@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Modal CSS</title>
+  <style>
+    /* Định dạng trang */
+    body {
+      margin: 0;
+      font-family: Times New Roman, Arial;
+    }
+
+    /* Ẩn checkbox */
+    #modal-toggle {
+      display: none;
+    }
+
+    /* CSS nút Mở modal */
+    .open-btn {
+      display: inline-block;
+      margin: 20px;
+      padding: 12px 24px;
+      background-color: #3b82f6;
+      color: #ffffff;
+      border-radius: 4px;
+      border: none;
+      font-size: 16px;
+    }
+
+    /* Lớp nền overlay */
+    .overlay {
+      display: none;
+      background-color: rgba(0, 0, 0, 0.5);
+      width: 100vw;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Hộp Modal trắng */
+    .modal {
+      background-color: #ffffff;
+      padding: 40px;
+      border-radius: 4px;
+      text-align: center;
+      min-width: 300px;
+    }
+
+    /* Nội dung trong modal */
+    .modal p {
+      color: #333333;
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
+
+    /* CSS nút Đóng */
+    .close-btn {
+      display: inline-block;
+      padding: 10px 30px;
+      background-color: #ef4444;
+      color: #ffffff;
+      border-radius: 4px;
+      border: none;
+      font-size: 16px;
+    }
+
+    /* Khi input được check, tìm thẻ .overlay là anh em kế tiếp để hiển thị */
+    #modal-toggle:checked ~ .overlay {
+      display: flex;
+    }
+
+    /* Ẩn nút mở modal hiện ra khi modal đang mở */
+    #modal-toggle:checked ~ .open-btn {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+
+<input type="checkbox" id="modal-toggle">
+
+<label for="modal-toggle" class="open-btn">Mở modal</label>
+
+<label for="modal-toggle" class="overlay">
+  <div class="modal">
+    <p>Đây là nội dung thông báo!</p>
+    <label for="modal-toggle" class="close-btn">Đóng</label>
+  </div>
+</label>
+
+</body>
+</html>
