@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 40px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.container {
+    width: 600px;
+    height: 200px;
+    background-color: #eeeeee;
+    border: 2px solid red;
+    display: flex;
+    position: relative;
+}
+
+.box {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+}
+
+/*Cho màu nền 3 hình theo thứ tự*/
+.box:nth-child(1) {
+    background-color: #5980b1;
+}
+.box:nth-child(2) {
+    background-color: #5980b1;
+}
+.box:nth-child(3) {
+    background-color: #5980b1;
+}
+
+/* Flex 10 hình */
+.img-1 {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.img-2 {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.img-3 {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.img-3 .box:nth-child(2) {
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.img-4 {
+    justify-content: center;
+    align-items: center;
+}
+.img-4 .box:nth-child(2) {
+    margin-left: 10px;
+    margin-right: 40px;
+}
+
+.img-5 {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-6 {
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.img-7 {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.img-7 .box:nth-child(2) {
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+.img-8 {
+    align-items: center;
+}
+.img-8 .box:nth-child(2) {
+    margin: 0 auto;
+}
+
+.img-9 {
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.img-9 .box:nth-child(1) {
+    margin-bottom: 60px;
+}
+.img-9 .box:nth-child(3) {
+    margin-top: 60px;
+}
+
+.img-10 {
+    display: flex;
+}
+.img-10 .box:nth-child(1) {
+    align-self: flex-start;
+}
+.img-10 .box:nth-child(2) {
+    margin: auto;
+}
+.img-10 .box:nth-child(3) {
+    align-self: flex-end;
+}
