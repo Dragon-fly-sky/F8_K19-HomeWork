@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <title>Tạp chí Cà Phê Việt Nam</title>
+    <style>
+        .card__subtitle{
+            border: red solid 2px;
+            padding: 5px;
+        }
+        .card__text{
+            border: red solid 2px;
+            padding: 5px;
+        }
+        .gallery__nest > .gallery__img{
+            border: blue solid 2px;
+        }
+        .catalog ~ .gallery .gallery__figure > .gallery__img{
+            border: red solid 7px;
+            margin: 7px 0 7px 0;
+        }
+        .post__list .post__item:nth-child(3){
+            background-color: #bbf7d0;
+        }
+        .blog .post:first-child .post__body .post__text:nth-child(2){
+            padding: 5px;
+            border: green solid 2px;
+            background-color: #bbf7d0;
+        }
+        .section > .aside .aside__list .aside__item:last-child{
+            padding: 5px;
+            border-width: 16px 0 0 0;
+            border-style: solid;
+            border-color: yellow;
+        }
+        .post__subtitle{
+            padding: 5px;
+            border: green solid 16px;
+            background-color: #bbf7d0;
+        }
+        .section > .aside .aside__list{
+            padding: 48px;
+            border: orange solid 16px;
+        }
+        #toggle-highlight:checked ~ .aside .aside__list .aside__item:last-child{
+            background-color: #bbf7d0;
+            border: green solid 1px;
+        }
+
+    </style>
+</head>
+<body>
+<main class="site">
+    <header class="header">
+        <h1 class="header__logo">Tạp chí Cà Phê Việt Nam</h1>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item">Trang chủ</li>
+                <li class="nav__item">Danh mục</li>
+                <li class="nav__item">Bài viết</li>
+                <li class="nav__item">Liên hệ</li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <section class="section">
+            <div class="catalog">
+                <article class="card">
+                    <header class="card__header">
+                        <h2 class="card__title">Arabica Việt</h2>
+                        <p class="card__subtitle">Lâm Đồng • Sơn La • Điện Biên</p>
+                    </header>
+                    <div class="card__content">
+                        <p class="card__text">Hương hoa, chua thanh, ngọt hậu dài.</p>
+                        <ul class="card__list">
+                            <li class="card__item">Rang mỗi tuần</li>
+                            <li class="card__item">Truy xuất lô rang</li>
+                            <li class="card__item">Giao nhanh 2h</li>
+                        </ul>
+                    </div>
+                    <footer class="card__footer">
+                        <small class="card__note">Gợi ý pha: Pour-over 1:15</small>
+                    </footer>
+                </article>
+                <aside class="aside">
+                    <div class="aside__block">
+                        <h3 class="aside__title">Mẹo pha</h3>
+                        <ul class="aside__list">
+                            <li class="aside__item">Làm nóng dụng cụ</li>
+                            <li class="aside__item">Xả CO₂ 30–45 giây</li>
+                            <li class="aside__item">Rót xoay tròn đều</li>
+                        </ul>
+                    </div>
+                    <div class="aside__block">
+                        <h3 class="aside__title">Checklist</h3>
+                        <ul class="aside__list">
+                            <li class="aside__item">Cân điện tử</li>
+                            <li class="aside__item">Ấm cổ ngỗng</li>
+                            <li class="aside__item">Giấy lọc</li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+            <div class="gallery">
+                <figure class="gallery__figure">
+                    <figcaption class="gallery__caption">Dụng cụ phổ biến</figcaption>
+                    <img class="gallery__img" src="https://images.unsplash.com/photo-1511920170033-f8396924c348?w=800&q=80" alt="Phin cà phê">
+                </figure>
+            </div>
+        </section>
+        <section class="section">
+            <div class="blog">
+                <article class="post">
+                    <header class="post__header">
+                        <h2 class="post__title">Lịch sử cà phê Việt Nam</h2>
+                    </header>
+                    <div class="post__body">
+                        <p class="post__text">Từ thế kỷ 19, cây cà phê theo chân nhà truyền giáo...</p>
+                        <p class="post__text">Người Việt tạo nên văn hoá phin độc đáo...</p>
+                        <section class="post__section">
+                            <h3 class="post__subtitle">Điểm nhấn</h3>
+                            <ul class="post__list">
+                                <li class="post__item">Phin truyền thống</li>
+                                <li class="post__item">Quán cóc bình dân</li>
+                                <li class="post__item">Cà phê sữa đá</li>
+                                <li class="post__item">Cà phê trứng</li>
+                                <li class="post__item">Biến tấu hiện đại</li>
+                            </ul>
+                        </section>
+                    </div>
+                    <footer class="post__footer">
+                        <small class="post__note">Tư liệu: Thư viện quốc gia</small>
+                    </footer>
+                </article>
+                <article class="post">
+                    <header class="post__header">
+                        <h2 class="post__title">Latte Art cơ bản</h2>
+                    </header>
+                    <div class="post__body">
+                        <p class="post__text">Chuẩn bị sữa tươi lạnh, vòi hơi sạch...</p>
+                    </div>
+                </article>
+            </div>
+            <div class="gallery">
+                <figure class="gallery__figure">
+                    <figcaption class="gallery__caption">Khoảnh khắc tại quầy bar</figcaption>
+                    <div class="gallery__wrap">
+                        <img class="gallery__img" src="https://images.unsplash.com/photo-1510626176961-4b57d4fbad03?w=800&q=80" alt="Cốc espresso crema">
+                        <div class="gallery__nest">
+                            <img class="gallery__img" src="https://images.unsplash.com/photo-1517705008128-361805f42e86?w=800&q=80" alt="Quầy barista">
+                        </div>
+                    </div>
+                </figure>
+            </div>
+        </section>
+        <section class="section">
+            <input type="checkbox" id="toggle-highlight" />
+            <label for="toggle-highlight">Bật chế độ tô điểm</label>
+            <div>
+                <div class="stories">
+                    <article class="story">
+                        <header class="story__header">
+                            <h2 class="story__title">Chuyện Nhà Rang – Tập 1</h2>
+                        </header>
+                        <div class="story__body">
+                            <p class="story__text">Mẻ rang đầu đạt màu nâu cánh gián...</p>
+                            <section class="story__section">
+                                <h3 class="story__subtitle">Ghi chú kỹ thuật</h3>
+                                <ul class="story__list">
+                                    <li class="story__item">Charge 200°C</li>
+                                    <li class="story__item">First crack ~ 9’30”</li>
+                                    <li class="story__item">Drop 12’10”</li>
+                                </ul>
+                            </section>
+                        </div>
+                        <footer class="story__footer">
+                            <small class="story__note">Batch #25</small>
+                        </footer>
+                    </article>
+                    <article class="story">
+                        <header class="story__header">
+                            <h2 class="story__title">Chuyện Nhà Rang – Tập 2</h2>
+                        </header>
+                        <div class="story__body">
+                            <p class="story__text">Cập nhật profile rang cho hương chocolate...</p>
+                            <p class="story__text">Thử nghiệm airflow cao hơn ở phút 7...</p>
+                            <div class="story__notes">
+                                <p class="story__text">Cupping: body dày, độ ngọt tăng</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="story">
+                        <header class="story__header">
+                            <h2 class="story__title">Chuyện Nhà Rang – Tập 3</h2>
+                        </header>
+                        <div class="story__intro">
+                            <p class="story__text">Khách tham quan xưởng và trải nghiệm cupping.</p>
+                        </div>
+                        <figure class="story__figure">
+                            <figcaption class="story__caption">Sơ đồ luồng quy trình</figcaption>
+                        </figure>
+                        <div class="story__nest">
+                            <div class="story__nest">
+                                <figure class="story__figure">
+                                    <div class="story__wrap">
+                                        <img class="story__img" src="https://images.unsplash.com/photo-1494314671902-399b18174975?w=800&q=80" alt="Ảnh trải nghiệm 2">
+                                    </div>
+                                    <div class="story__wrap">
+                                        <img class="story__img" src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&q=80" alt="Ảnh trải nghiệm 1">
+                                    </div>
+                                    <figcaption class="story__caption">Hai khoảnh khắc nổi bật</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="story__details">
+                            <section class="story__block">
+                                <h3 class="story__subtitle">Phản hồi nhanh</h3>
+                                <ul class="story__list">
+                                    <li class="story__item">Mùi thơm rõ</li>
+                                    <li class="story__item">Hậu vị kéo dài</li>
+                                    <li class="story__item">Cần thêm bảng thông tin</li>
+                                </ul>
+                            </section>
+                            <section class="story__block">
+                                <h3 class="story__subtitle">Kế hoạch tuần tới</h3>
+                                <ul class="story__list">
+                                    <li class="story__item">Tăng slot tham quan</li>
+                                    <li class="story__item">Chuẩn hóa quy trình đón khách</li>
+                                </ul>
+                            </section>
+                        </div>
+                        <footer class="story__footer">
+                            <small class="story__note">Ghi chú: batch #27</small>
+                        </footer>
+                    </article>
+                </div>
+            </div>
+            <aside class="aside">
+                <div class="aside__block">
+                    <h3 class="aside__title">Sự kiện</h3>
+                    <ul class="aside__list">
+                        <li class="aside__item">Ưu đãi lễ hội</li>
+                        <li class="aside__item">Workshop Cupping</li>
+                    </ul>
+                </div>
+                <div class="aside__block">
+                    <h3 class="aside__title">Cộng đồng</h3>
+                    <ul class="aside__list">
+                        <li class="aside__item">Cuộc thi Latte Art</li>
+                        <li class="aside__item">Tour nông trại</li>
+                        <li class="aside__item">Meetup barista</li>
+                    </ul>
+                </div>
+            </aside>
+            <div class="gallery">
+                <figure class="gallery__figure">
+                    <figcaption class="gallery__caption">Kho ảnh gọn</figcaption>
+                    <img class="gallery__img" src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800&q=80" alt="Kho chứa hạt">
+                </figure>
+            </div>
+        </section>
+    </div>
+    <footer class="footer">
+        <p class="footer__copy">© 2025 Tạp chí Cà Phê Việt Nam</p>
+    </footer>
+</main>
+</body>
+</html>

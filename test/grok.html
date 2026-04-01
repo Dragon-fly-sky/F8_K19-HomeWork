@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>modal.html</title>
+  <style>
+    /* Ẩn checkbox hoàn toàn - không hiển thị và không chiếm chỗ */
+    #modal-toggle {
+      display: none;
+    }
+
+    /* Nút mở modal - luôn hiển thị */
+    .open-btn {
+      display: inline-block;
+      background-color: #3b82f6;
+      color: #ffffff;
+      padding: 12px 24px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin: 40px;
+      text-decoration: none;
+    }
+    .open-btn:hover {
+      background-color: #2563eb;
+    }
+
+    /* Lớp overlay (là label) - ban đầu ẩn */
+    .overlay {
+      display: none;
+      position: fixed;           /* phủ toàn màn hình */
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.5);   /* đúng yêu cầu */
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;           /* để người dùng biết có thể bấm đóng */
+    }
+
+    /* Khi checkbox được check thì hiển thị overlay */
+    #modal-toggle:checked ~ .overlay {
+      display: flex;             /* dùng flex để căn giữa modal */
+    }
+
+    /* Hộp modal bên trong overlay */
+    .modal {
+      background-color: #ffffff; /* đúng yêu cầu */
+      padding: 30px 40px;
+      border-radius: 8px;
+      text-align: center;
+      width: 320px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* chỉ để đẹp, không dùng z-index */
+      color: #333333;            /* chữ nội dung đúng yêu cầu */
+      position: relative;        /* chỉ để nút đóng nằm đúng chỗ, không ảnh hưởng overlay */
+    }
+
+    /* Nội dung thông báo */
+    .modal p {
+      margin: 0 0 25px 0;
+      font-size: 18px;
+    }
+
+    /* Nút đóng bên trong modal */
+    .close-btn {
+      background-color: #ef4444;   /* đúng yêu cầu */
+      color: #ffffff;
+      padding: 10px 30px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      display: inline-block;
+    }
+    .close-btn:hover {
+      background-color: #dc2626;
+    }
+
+    /* Comment giải thích phần quan trọng nhất */
+    /* Kỹ thuật: checkbox + label
+       - Label.open-btn kích hoạt checkbox
+       - Label.overlay là "công tắc" đóng khi bấm bất kỳ đâu trên nền tối
+       - Vì modal nằm bên trong overlay nên bấm nút Đóng cũng kích hoạt cùng label → đóng modal
+       - Không dùng position để ẩn/hiện (chỉ dùng display + :checked)
+       - Không dùng z-index, không dùng JavaScript */
+  </style>
+</head>
+<body>
+<!-- Input checkbox - id đúng yêu cầu -->
+<input type="checkbox" id="modal-toggle">
+
+<!-- Nút mở - class đúng yêu cầu -->
+<label for="modal-toggle" class="open-btn">Mở modal</label>
+
+<!-- Overlay là label, chứa modal bên trong - cấu trúc đúng yêu cầu -->
+<label for="modal-toggle" class="overlay">
+  <div class="modal">
+    <p>Đây là nội dung thông báo!</p>
+    <!-- Nút đóng cũng là label cùng id để đóng modal -->
+    <label for="modal-toggle" class="close-btn">Đóng</label>
+  </div>
+</label>
+
+<!-- Kiểm tra nhanh checklist đã thỏa mãn:
+     • Tên file: modal.html
+     • Modal ẩn khi tải trang (display:none)
+     • Bấm nút mở → overlay + modal hiện
+     • Bấm nút Đóng → tắt
+     • Bấm bất kỳ chỗ nào trên nền tối → tắt
+     • Chỉ dùng HTML + CSS thuần, không JS, không z-index
+     • CSS có comment đầy đủ -->
+</body>
+</html>

@@ -1,0 +1,161 @@
+/*1rem = 16px*/
+/*Sử dụng đơn vị rem*/
+html {
+    font-size: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+/*Xóa dấu chấm của thẻ ul*/
+ul {
+    list-style: none;
+}
+
+/*Xóa gạch chân thẻ a*/
+a {
+    text-decoration: none;
+    color: #333333;
+    display: block;
+}
+
+/* Header & Layout */
+.header {
+    background-color: #ffffff;
+    border-bottom: 0.0625rem solid #dddddd; /* 1px */
+    padding: 0.5rem 0; /* 8px */
+}
+
+.container {
+    max-width: 75rem; /* 1200px */
+    margin: 0 auto;
+}
+
+.logo {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 1.5625rem; /* 25px */
+}
+
+.logo img {
+    height: 2.375rem; /* 38px */
+    width: auto;
+    display: block;
+}
+
+.nav {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Menu cấp 1 */
+.menu-level-1 > li {
+    display: inline-block;
+    position: relative;
+    margin-right: 1.5625rem; /* 25px */
+}
+
+.menu-level-1 > li:last-child {
+    margin-right: 0;
+}
+
+.menu-link {
+    font-weight: bold;
+    padding: 0.375rem 0; /* 6px */
+    color: #333333;
+    transition: color 0.2s;
+}
+
+/* Menu cấp 1 giữ trạng thái active khi hover submenu */
+.menu-level-1 > li:hover > .menu-link {
+    color: #d62828;
+    border-bottom: 0.125rem solid #d62828; /* 2px */
+}
+
+.icon-down {
+    color: #555555;
+    font-size: 0.625rem; /* 10px */
+    margin-left: 0.3125rem;
+}
+
+/* Dropdown menu cấp 1 */
+.submenu-level-1 {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    min-width: 12.5rem; /* 200px */
+    border: 0.0625rem solid #dddddd;
+    z-index: 100;
+    box-shadow: 0 0.125rem 0.3125rem rgba(0,0,0,0.1);
+}
+
+.menu-level-1 > li:hover > .submenu-level-1 {
+    display: block;
+}
+
+.submenu-level-1 li {
+    position: relative;
+}
+
+.submenu-level-1 a {
+    padding: 0.375rem 0.625rem; /* 6px 10px */
+    font-weight: normal;
+    font-size: 0.875rem;
+}
+
+/* Hover trong dropdown */
+.submenu-level-1 li:hover > a {
+    background-color: #f5f5f5;
+    color: #d62828;
+}
+
+.icon-right {
+    float: right;
+    color: #777777;
+    font-size: 0.625rem;
+    line-height: 1.2;
+}
+
+/* Dropdown menu cấp 2 --- */
+.submenu-level-2 {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: #ffffff;
+    min-width: 12.5rem;
+    border: 0.0625rem solid #dddddd;
+    z-index: 101;
+}
+
+.has-submenu-2:hover > .submenu-level-2 {
+    display: block;
+}
+
+/* Icon cách lề phải 15px */
+.has-submenu-2 > a {
+    padding-right: 0.9375rem; /* 15px */
+}
+
+/*Check y/c:
+Header có logo và menu nằm ngang: ok
+4 mục cấp 1 hiển thị đúng: ok
+Hover mục cấp 1: đổi màu + underline: ok
+Dropdown cấp 1 xuất hiện khi hover: ok
+Dropdown cấp 2 xuất hiện sang phải khi hover: ok
+Icon ▾ hiển thị cho mục có submenu cấp 1: ok
+Icon ▸ hiển thị cho mục có submenu cấp 2: ok
+Mục cấp 1 giữ trạng thái active khi hover submenu: ok
+Sử dụng đơn vị rem: ok
+Không dùng flexbox, grid, JavaScript: ok
+*/
