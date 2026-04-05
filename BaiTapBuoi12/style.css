@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ebf5fe;
+    font-family: 'Roboto', sans-serif;
+    color: #666666;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+/* Container */
+.container {
+    max-width: 1140px;
+    width: 100%;
+}
+
+.services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* CSS Service Card */
+.service-card {
+    background-color: #ffffff;
+    border: 3px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 30px;
+    flex: 1 1 calc(33.333% - 20px);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+/* CSS Icon */
+.icon-box {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.icon-box i {
+    font-size: 32px;
+    color: #ffffff;
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333333;
+    line-height: 1.3;
+    margin-bottom: 15px;
+}
+
+.card-desc {
+    font-size: 15px;
+    font-weight: 400;
+    color: #666666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.btn-more {
+    font-size: 15px;
+    font-weight: 500;
+    color: #2196f3;
+    text-decoration: none;
+    margin-top: auto;
+    width: fit-content;
+}
+
+.btn-more:hover {
+    text-decoration: underline;
+}
+
+/* Hiệu ứng hover từng card */
+
+/* Unique UI/UX Design */
+.card-uiux .icon-box {
+    background-color: #ff6b6b;
+}
+.card-uiux:hover {
+    border-color: #ff6b6b;
+}
+
+/* Theme Development */
+.card-theme .icon-box {
+    background-color: #4ecdc4;
+}
+.card-theme:hover {
+    border-color: #4ecdc4;
+}
+
+/* Digital Marketing */
+.card-marketing .icon-box {
+    background-color: #f9a825;
+}
+.card-marketing:hover {
+    border-color: #f9a825;
+}
+
+/* Website Design */
+.card-web .icon-box {
+    background-color: #5e9cff;
+}
+.card-web:hover {
+    border-color: #5e9cff;
+}
+
+/* Responsive Design */
+.card-responsive .icon-box {
+    background-color: #9b59b6;
+}
+.card-responsive:hover {
+    border-color: #9b59b6;
+}
+
+/* Quick Support */
+.card-support .icon-box {
+    background-color: #7cb342;
+}
+.card-support:hover {
+    border-color: #7cb342;
+}
