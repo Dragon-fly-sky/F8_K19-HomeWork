@@ -1,0 +1,298 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f4f6f8;
+    font-family: Arial, sans-serif;
+    color: #1f2937;
+    padding: 40px;
+}
+
+/*INVOICE*/
+
+.invoice {
+    width: 820px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/*HEADER*/
+
+.invoice-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    padding-bottom: 32px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 10px;
+
+    background: #111827;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
+}
+
+.brand h1 {
+    font-size: 28px;
+    margin-bottom: 6px;
+}
+
+.brand p {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.invoice-meta {
+    text-align: right;
+}
+
+.badge {
+    display: inline-block;
+
+    background: #ecfdf5;
+    color: #059669;
+
+    padding: 6px 14px;
+    border-radius: 999px;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    margin-bottom: 12px;
+}
+
+.invoice-meta p {
+    margin-top: 6px;
+    color: #6b7280;
+}
+
+.invoice-meta strong {
+    color: #111827;
+}
+
+/*SELLER / CUSTOMER*/
+
+.info-section {
+    margin-top: 40px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 40px;
+}
+
+.info-box h3 {
+    font-size: 13px;
+    text-transform: uppercase;
+
+    color: #9ca3af;
+
+    padding-bottom: 12px;
+    margin-bottom: 18px;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.info-box h2 {
+    margin-bottom: 12px;
+}
+
+.info-box p {
+    margin-bottom: 8px;
+    color: #6b7280;
+}
+
+/*TABLE*/
+
+.invoice-table {
+    width: 100%;
+    margin-top: 48px;
+
+    border-collapse: collapse;
+}
+
+.invoice-table th {
+    text-align: left;
+
+    font-size: 12px;
+    text-transform: uppercase;
+
+    color: #9ca3af;
+
+    padding: 14px;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.invoice-table td {
+    padding: 18px 14px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.product-name,
+.total-price {
+    font-weight: bold;
+    color: #111827;
+}
+
+/*BOTTOM SECTION*/
+
+.bottom-section {
+    margin-top: 48px;
+    padding-top: 32px;
+
+    border-top: 1px solid #e5e7eb;
+
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+
+    gap: 32px;
+}
+
+/*PROMOTION*/
+
+.promotion {
+    background: #ecfeff;
+    border: 1px solid #ccfbf1;
+
+    border-radius: 16px;
+
+    padding: 20px;
+}
+
+.promotion-title {
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    color: #0f766e;
+
+    margin-bottom: 8px;
+}
+
+.promotion-description {
+    color: #0f766e;
+}
+
+/*SUMMARY*/
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 14px;
+}
+
+.summary-row.discount {
+    color: #059669;
+}
+
+.summary-total {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 20px;
+    padding-top: 20px;
+
+    border-top: 1px solid #e5e7eb;
+
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.summary-total .total-money {
+    color: #059669;
+}
+
+/*BUTTON*/
+
+.print-btn {
+    display: block;
+
+    margin: 24px auto 0;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #111827;
+    color: white;
+
+    padding: 12px 24px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+}
+
+/*PRINT*/
+
+@media print {
+    body {
+        background: white;
+        padding: 0;
+    }
+
+    .invoice {
+        width: 100%;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    .print-btn {
+        display: none;
+    }
+}
+
+/*RESPONSIVE*/
+
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
+    .invoice {
+        width: 100%;
+        padding: 24px;
+    }
+
+    .invoice-header {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .info-section {
+        grid-template-columns: 1fr;
+    }
+
+    .bottom-section {
+        grid-template-columns: 1fr;
+    }
+
+    .invoice-table {
+        display: block;
+        overflow-x: auto;
+    }
+}
