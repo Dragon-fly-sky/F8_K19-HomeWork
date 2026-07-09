@@ -1,0 +1,50 @@
+{
+  "customers": [
+    {
+      "id": "CUST-001",
+      "companyName": "Cty TNHH F8",
+      "email": "contact@f8.edu.vn",
+      "phone": "0987654321",
+      "address": "Hà Đông, Hà Nội",
+      "taxId": "018381123412",
+      "status": "Active"
+    },
+    {
+      "id": "CUST-002",
+      "companyName": "Cty Cổ Phần F9",
+      "email": "info@f9-corp.vn",
+      "phone": "0912345678",
+      "address": "Cầu Giấy, Hà Nội",
+      "taxId": "018381123413",
+      "status": "Pending"
+    },
+    {
+      "id": "CUST-003",
+      "companyName": "Global Tech LLC",
+      "email": "hello@globaltech.com",
+      "phone": "0243111222",
+      "address": "Quận 1, TP. HCM",
+      "taxId": "0312345678",
+      "status": "Active"
+    },
+    {
+      "id": "CUST-004",
+      "companyName": "Công ty TNHH ABC",
+      "email": "sales@abc.vn",
+      "phone": "0909123456",
+      "address": "Hải Châu, Đà Nẵng",
+      "taxId": "0401234567",
+      "status": "Inactive"
+    },
+    {
+      "id": "CUST-005",
+      "companyName": "ABC Corporation",
+      "email": "contact@xyz.com",
+      "phone": "0933456789",
+      "address": "Ba Đình, Hà Nội",
+      "taxId": "0109876543",
+      "status": "Active"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
