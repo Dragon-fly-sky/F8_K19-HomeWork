@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Card Layout - BEM & Checkbox Hack</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<input type="checkbox" id="menu-toggle" class="header__checkbox" hidden>
+
+<label for="menu-toggle" class="overlay"></label>
+
+<header class="header">
+    <div class="header__logo">MYLOGO</div>
+
+    <label for="menu-toggle" class="header__hamburger">
+        <span class="mdi mdi-menu"></span>
+    </label>
+
+    <nav class="header__nav nav">
+        <label for="menu-toggle" class="nav__close-btn">
+            <span class="mdi mdi-close"></span>
+        </label>
+        <ul class="nav__list">
+            <li class="nav__item"><a href="#" class="nav__link">Trang chủ</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Sản phẩm</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Dịch vụ</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Liên hệ</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="container">
+    <div class="container__content">
+        <h1 class="container__heading">Khám phá bộ sưu tập</h1>
+        <p class="container__paragraph">Dưới đây là danh sách các thẻ nội dung được thiết kế tối ưu cho mọi thiết bị.</p>
+
+        <div class="cards">
+            <article class="card">
+                <div class="card__header">THIẾT KẾ WEB</div>
+                <div class="card__body">Nội dung mô tả ngắn gọn về dịch vụ thiết kế website chuyên nghiệp.</div>
+            </article>
+            <article class="card">
+                <div class="card__header">MARKETING</div>
+                <div class="card__body">Giải pháp truyền thông số giúp doanh nghiệp bứt phá doanh thu.</div>
+            </article>
+            <article class="card">
+                <div class="card__header">ĐỒ HỌA</div>
+                <div class="card__body">Sáng tạo bộ nhận diện thương hiệu đẳng cấp và độc đáo.</div>
+            </article>
+            <article class="card">
+                <div class="card__header">SEO</div>
+                <div class="card__body">Tối ưu hóa công cụ tìm kiếm đưa website lên top bền vững.</div>
+            </article>
+            <article class="card">
+                <div class="card__header">APP MOBILE</div>
+                <div class="card__body">Phát triển ứng dụng di động đa nền tảng mượt mà.</div>
+            </article>
+        </div>
+    </div>
+
+    <aside class="container__sidebar">
+        <h2 class="container__heading">Thông tin thêm</h2>
+        <p class="container__paragraph">Đây là khu vực sidebar chứa các liên kết nhanh hoặc quảng cáo bổ trợ.</p>
+    </aside>
+</main>
+
+</body>
+</html>
